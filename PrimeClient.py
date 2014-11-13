@@ -19,12 +19,12 @@ if serviceAddress==empty_str:
 	serviceAddress=input("Sorry, no input given. What is the IP of the Service you wish to access?")
 
 # connect to server
-c=rypc.connect(serviceAddress,1234) 
+c=rpyc.connect(serviceAddress,12345)
 
 
-num =int( input("What number would you like to check if prime?))
+num =int( input("What number would you like to check if prime?"))
 
 print(c.root.is_prime(num))
 
-print(c.root.get_primes())
+
 
