@@ -18,7 +18,6 @@ import rpyc
 
 class PrimeService(rpyc.Service):
 
-   prime_num = []
 
    #unused
     def on_connect(self):
