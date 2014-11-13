@@ -2,6 +2,7 @@
 
 
 Developer: Jovaughn Chin
+Date:      11/13/2014
 
 """
 
@@ -10,21 +11,24 @@ Developer: Jovaughn Chin
 import rpyc
 
 #ask Client the location/server of the Service he wish to access
-
-serviceAddress= input(" What is the IP of the Service you wish to access?")
+IPAddress= input(" What is the location(IP) of the server you wish to access?")
 
 empty_str=""
 
-if serviceAddress==empty_str:
-	serviceAddress=input("Sorry, no input given. What is the IP of the Service you wish to access?")
+#Validate IP address
+try:
+ ipaddress.ip_address(IPAddress)
+
+except ValueError:
+	IPAddress=input("Sorry, wrong input. Please input correct location(IP) of the server you wish to access?")
 
 # connect to server
-c=rypc.connect(serviceAddress,1234) 
+c=rypc.connect(IPAddress,12345) 
 
 
 num =int( input("What number would you like to check if prime?))
 
 print(c.root.is_prime(num))
 
-print(c.root.get_primes())
+print(c.root.get_primes(num))
 

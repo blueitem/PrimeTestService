@@ -3,9 +3,13 @@
    It also prints a list of prime numbers up to a given point, which is established by 
    a user input
 
+   Developer: Jovaughn Chin
+   Date:      11/13/2014
+
 """
 
 import rpyc
+import math
 
 from rpyc.utils.server import ThreadedServer
 
@@ -24,7 +28,7 @@ class PrimeTestService(rpyc.Service):
         pass
  
     
-    # this is an exposed method that checks whether or not a number is a prime
+    # Exposed method that checks whether or not a number is a prime
 
     def exposed_is_prime(self, num): 
         
@@ -44,7 +48,7 @@ class PrimeTestService(rpyc.Service):
         return valid
 
 
-# Output prime numbers up to a given number
+# Exposed method that output prime numbers up to a given number
 
     def exposed_get_primes(self,x): 
 
