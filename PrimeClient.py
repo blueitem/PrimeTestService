@@ -23,6 +23,7 @@ except ValueError:
 	IPAddress=input("Sorry, wrong input. Please input correct location(IP) of the server you wish to access?: ")
 
 # connect to server
+<<<<<<< HEAD
 c=rypc.connect(IPAddress,12345) 
 
 # validate input is a number
@@ -34,4 +35,14 @@ except ValueError:
 print(c.root.is_prime(num))
 
 print(c.root.get_primes(num))
+=======
+c=rpyc.connect(serviceAddress,12345)
+
+
+num =int( input("What number would you like to check if prime?"))
+
+print(c.root.is_prime(num))
+
+
+>>>>>>> 78954bb1c05bb2b7081b42ad0b3c608c1347b49b
 
