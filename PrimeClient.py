@@ -2,13 +2,14 @@
 
 (Python 3.4.2)
 
-Developer: Jovaughn Chin
-Date:      11/13/2014
+Author: Jovaughn Chin
+        Jonathan Gonzoph
+Date:   11/13/2014
 
 """
 
 
-# import RPyc Python 3.4
+# import rpyc for connection, ipaddress for IP validation
 import rpyc
 import ipaddress
 
@@ -32,16 +33,7 @@ try:
 except ValueError:
     num = int(input("Sorry, wrong input. Please input a number: "))
 
-print(c.root.is_prime(num))
-
-print(c.root.get_primes(num))
-=======
-c=rpyc.connect(serviceAddress,12345)
-
-
-num =int( input("What number would you like to check if prime?"))
-
-print(c.root.is_prime(num))
+print(c.root.isPrime(num))
 
 
 >>>>>>> 78954bb1c05bb2b7081b42ad0b3c608c1347b49b
