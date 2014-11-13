@@ -3,6 +3,8 @@
    It also prints a list of prime numbers up to a given point, which is established by 
    a user input
 
+   (Python 3.4.2)
+   
    Developer: Jovaughn Chin
    Date:      11/13/2014
 
