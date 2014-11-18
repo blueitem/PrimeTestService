@@ -4,7 +4,7 @@
 
 Author: Jovaughn Chin
         Jonathan Gonzoph
-Date:   11/13/2014
+Date:   11/17/2014
 
 """
 
@@ -24,7 +24,6 @@ except ValueError:
 	IPAddress=input("Sorry, wrong input. Please input correct location(IP) of the server you wish to access?: ")
 
 # connect to server
-<<<<<<< HEAD
 c=rypc.connect(IPAddress,12345) 
 
 # validate input is a number
@@ -35,6 +34,4 @@ except ValueError:
 
 print(c.root.isPrime(num))
 
-
->>>>>>> 78954bb1c05bb2b7081b42ad0b3c608c1347b49b
 
